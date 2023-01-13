@@ -1,0 +1,38 @@
+﻿<div>
+    <a href="~/produto/create">Criar</a>
+<table>
+    <thead>
+        <tr>
+        <th>
+            Produto
+        </th>
+        <th>
+                    
+        </th>
+        <th>
+                    
+        </th>
+        </tr>
+    </thead>
+
+    @foreach (var item in ViewBag.Produtos)
+        {    <tbody>
+        <tr>
+        <th>
+            @item.nome
+        </th>
+        <th>
+                        <a href="~/produto/edit?id=@item.id&nome=@item.nome">Edit</a>
+                    </th>
+        <th>
+                        <a href="~/produto/delete?id=@item.id&nome=@item.nome">Delete</a>
+                    </th>
+        </tr>
+    </tbody>
+            
+        }
+
+
+</table>
+
+</div>
