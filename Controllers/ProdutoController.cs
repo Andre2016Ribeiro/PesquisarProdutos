@@ -15,6 +15,7 @@ namespace PesquisarProdutos.Controllers
         };
         public IActionResult Index()
         {
+            ViewBag.a = Produtos.Last().id +1;
             ViewBag.Produtos = Produtos;    
             return View();
         }
@@ -84,14 +85,14 @@ namespace PesquisarProdutos.Controllers
 
             return View();
         }
-        public ViewResult Create()
+        public ViewResult Create(int id)
         {
 
-            
-            ViewBag.a = Produtos.Last().id;
+
+            ViewBag.a = id;
             
 
-
+            
 
 
 
@@ -99,14 +100,14 @@ namespace PesquisarProdutos.Controllers
 
             return View();
         }
-        [HttpPost]
+       [HttpPost]
         public ViewResult Create(Produto novo)
         {
 
 
 
+            
             Produtos.Add(novo);
-
 
 
 
