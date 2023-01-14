@@ -117,7 +117,7 @@ namespace PesquisarProdutos.Controllers
 
 
 
-            return View();
+            return (ViewResult)Index();
         }
 
     }
